@@ -11,11 +11,24 @@ namespace CSCI352Lab1
         static void Main(string[] args)
         {
             Random lottery = new Random();
-            int number = lottery.Next(0, 100);
+            int number = 0;
             int userGuess = 0;
             int attempts = 0;
+            int x = 0;
+            int y = 0;
 
-            Console.WriteLine("I'm thinking of a number between 0 and 100.");
+            Console.WriteLine("I'm going to guess a number. What 2 numbers do you want it to be between?");
+
+            Console.Write("Lowest Number: ");
+            x = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Highest Number: ");
+            y = Convert.ToInt32(Console.ReadLine());
+
+            number = lottery.Next(x, y);
+
+            Console.WriteLine();
+            Console.WriteLine("I'm thinking of a number between {0} and {1}.", x, y);
             userGuess = GetGuess(number);
 
             while (userGuess != number)
