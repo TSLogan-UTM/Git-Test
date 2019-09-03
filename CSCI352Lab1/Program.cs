@@ -15,6 +15,7 @@ namespace CSCI352Lab1
             int userGuess = 0;
             int attempts = 0;
 
+            Console.WriteLine("I'm thinking of a number between 0 and 100.");
             userGuess = GetGuess(number);
 
             while (userGuess != number)
@@ -54,7 +55,6 @@ namespace CSCI352Lab1
         {
             int userGuess = 0;
 
-            Console.WriteLine("I'm thinking of a number between 0 and 100.");
             Console.Write("What do you think it is? - ");
             userGuess = Convert.ToInt32(Console.ReadLine());
             return userGuess;
